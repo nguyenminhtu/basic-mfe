@@ -26,4 +26,4 @@ jobs:
           secret_key: ${{ secrets.SECRET_KEY }}
           space_name: ${{ secrets.SPACE_NAME }}
           space_region: ${{ secrets.SPACE_REGION }}
-          source: dist
+          source: dist/*
