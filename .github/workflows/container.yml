@@ -27,3 +27,5 @@ jobs:
           space_name: ${{ secrets.SPACE_NAME }}
           space_region: ${{ secrets.SPACE_REGION }}
           source: dist/*
+          out_dir: container
+          versioning: true
