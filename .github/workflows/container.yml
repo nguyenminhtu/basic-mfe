@@ -26,6 +26,6 @@ jobs:
           secret_key: ${{ secrets.SECRET_KEY }}
           space_name: ${{ secrets.SPACE_NAME }}
           space_region: ${{ secrets.SPACE_REGION }}
-          source: dist/*.[html,js]
+          source: dist/index.html
           out_dir: container
           versioning: true
