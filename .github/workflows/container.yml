@@ -18,7 +18,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - run: npm install
-      - run: npm run build && ls - al
+      - run: npm run build && pwd
 
       - uses: BetaHuhn/do-spaces-action@v2
         with:
