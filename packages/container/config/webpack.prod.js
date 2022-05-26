@@ -4,8 +4,8 @@ const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPl
 const commonConfig = require('./webpack.common');
 const packageJson = require('../package.json');
 
-// const domain = process.env.PRODUCTION_DOMAIN;
-const domain = 'https://basic-mfe.sgp1.cdn.digitaloceanspaces.com';
+const domain = process.env.PRODUCTION_DOMAIN;
+// const domain = 'https://basic-mfe.sgp1.cdn.digitaloceanspaces.com';
 
 const prodConfig = {
   mode: 'production',
@@ -16,7 +16,7 @@ const prodConfig = {
     new ModuleFederationPlugin({
       name: 'container',
       remotes: {
-        marketing: 'marketing@https://basic-mfe.sgp1.cdn.digitaloceanspaces.com/marketing/remoteEntry.js',
+        marketing: `marketing@${domain}/marketing/remoteEntry.js`,
       },
       shared: packageJson.dependencies,
     }),
