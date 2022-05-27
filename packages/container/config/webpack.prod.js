@@ -5,12 +5,12 @@ const commonConfig = require('./webpack.common');
 const packageJson = require('../package.json');
 
 const domain = process.env.PRODUCTION_DOMAIN;
-// const domain = 'https://basic-mfe.sgp1.cdn.digitaloceanspaces.com';
 
 const prodConfig = {
   mode: 'production',
   output: {
     filename: '[name].[contenthash].js',
+    publicPath: '/container/latest/',
   },
   plugins: [
     new ModuleFederationPlugin({
