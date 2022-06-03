@@ -11,11 +11,11 @@ import Header from './components/Header';
 
 export default function App() {
   return (
-    <StylesProvider generateClassName={generateClassName}>
-      <Router>
+    <Router>
+      <StylesProvider generateClassName={generateClassName}>
         <Header />
         <MarketingApp />
-      </Router>
-    </StylesProvider>
+      </StylesProvider>
+    </Router>
   );
 }
