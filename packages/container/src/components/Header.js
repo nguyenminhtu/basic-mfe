@@ -67,6 +67,7 @@ export default function Header({ isSignedIn, onSignOut }) {
           <Typography variant="h6" color="inherit" noWrap component={RouterLink} to="/">
             App
           </Typography>
+
           <Button
             color="primary"
             variant="outlined"
