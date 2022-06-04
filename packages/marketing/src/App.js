@@ -15,6 +15,7 @@ export default function App({ history }) {
       <Router history={history}>
         <Switch>
           <Route exact path="/pricing" component={Pricing} />
+
           <Route path="/" component={Landing} />
         </Switch>
       </Router>
